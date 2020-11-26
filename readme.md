@@ -23,6 +23,11 @@ The dataset is not processed and it needs further preprocessing. From the raw im
 ### Optimizer
 - Adam
 
+## Usage
+Download the dataset from the provided link and unzip the "*raw*" folder in the current directory. Create a file named "img" and run
+> ```python generator.py```
+
+Finally, run the notebook.
 
 ## Requirements
 - python==3.7.0
