@@ -61,10 +61,15 @@ for file_number in range(len(file_arr)):
                 ret, imgf = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
                 im1 = Image.fromarray(imgf)
 
+                newpath = os.getcwd() + '/img'
+                if not os.path.exists(newpath):
+                    print("nai")
+                    os.makedirs(newpath)
+
 		
                 try:
-                    im1.save("img\\" + img_label + " " + str(word_number) + "__" + file_arr[file_number])
-                    # "img" folder should be created beforehand on the current path. Will add code to create file dynamically if not exists.
+                    if (len(img_label) < 16 ):
+                        im1.save("img\\" + img_label + " " + str(word_number) + "__" + file_arr[file_number])
                 except:
                     if img_label == '*':
                         im1.save("img\\" + "--- " + str(word_number) + "__" + file_arr[file_number])
@@ -81,3 +86,6 @@ for file_number in range(len(file_arr)):
             pass
 
 print(failed_to_save)
+
+if os.path.exists("temp.jpg"):
+  os.remove("temp.jpg")
