@@ -24,7 +24,7 @@ The dataset is not processed and it needs further preprocessing. From the raw im
 - Adam
 
 ## Usage
-Download the dataset from the provided link and unzip the "*raw*" folder in the current directory. Create a file named "img" and run
+Download the dataset from the provided link and unzip the "*raw*" file in the current directory and run
 > ```python generator.py```
 
 Finally, run the notebook.
